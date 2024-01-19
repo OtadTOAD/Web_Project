@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://fonts.cdnfonts.com/css/archivo" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index_style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar_left">
+        <div
+          class="navbar_icon"
+          style="transform: scale(1.25)"
+          id="reload_button"
+        >
+          <img src="Data/WebIcon.jpeg" style="transform: scale(2)" />
+        </div>
+        <button class="navbar_button" id="navbar_relay" linkName="browse.html">
+          <i class="fa-solid fa-compass"></i>
+          <strong>Browse</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="rankings.html"
+        >
+          <i class="fa-solid fa-list"></i>
+          <strong>Rankings</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="create"
+        >
+          <i class="fa-solid fa-pen-nib"></i>
+          <strong>Create</strong>
+        </button>
+        <button class="navbar_button">
+          <i class="fa-solid fa-trophy"></i>
+          <strong>Contest</strong>
+        </button>
+      </div>
+
+      <div class="navbar_right">
+        <button class="navbar_search">
+          <i class="fa-solid fa-magnifying-glass" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="library"
+        >
+          Library
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="forum"
+        >
+          Forum
+        </button>
+        <button class="navbar_settings">
+          <i class="fa-solid fa-gear" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_sign_in"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="login"
+        >
+          Sign In
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="content_segment" id="content_segment_1">
+        <div class="weekly_book">
+          <strong>Weekly Book</strong>
+          <div class="weekly_book_display" id="novel_button" novelID="1">
+            <img src="Data/Novel_1_Icon.png" />
+            <div>
+              <strong>Ephemeral Echoes</strong>
+              <p class="novel_paragraph" data-max-chars="200">
+                In the mysterious town of Evercrest, residents confront
+                rewritten memories and hidden abilities. Newcomer Alex Harper
+                unearths "The Arcane Enigma," sparking a perilous journey with
+                eclectic allies. As time twists, they navigate forgotten
+                memories and face reality-altering consequences. "Ephemeral
+                Echoes" weaves suspense, supernatural intrigue, and
+                psychological twists, exploring identity and destiny in
+                Evercrest's enigmatic past.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekly_info">
+          <strong>Meet Webnovel</strong>
+
+          <div class="weekly_info_section">
+            <div>
+              <strong>Author Benefits</strong>
+              <p>Create a new book and get your bonus</p>
+            </div>
+
+            <img src="Data/Authors Benefits.jpeg" />
+          </div>
+          <div class="weekly_info_section">
+            <div>
+              <strong>Explore our Creative Haven</strong>
+              <p>
+                Dive into a realm of captivating stories and let your
+                imagination soar freely.
+              </p>
+            </div>
+
+            <img src="Data/Gallery.jpeg" />
+          </div>
+          <div class="weekly_info_section">
+            <div>
+              <strong>Explore Extra Stories & Perks!</strong>
+              <p>Complete quests for coins, points, badges, and frames!</p>
+            </div>
+
+            <img src="Data/Rewards.jpeg" />
+          </div>
+        </div>
+      </div>
+
+      <div class="content_segment" , id="content_segment_2">
+        <strong style="font-size: xx-large">Weekly Featured</strong>
+        <div class="weekly_featured">
+          <!-- Top 3 Selection -->
+          <div class="weekly_featured_selection">
+            <div class="weekly_featured_selection_visual">
+              <div
+                class="weekly_featured_background"
+                id="weekly_featured_background"
+              ></div>
+
+              <div
+                class="weekly_featured_card"
+                onclick="switchNovelCard(this)"
+                novelID="3"
+                name="Celestial Reverie"
+                author="StarrySeraph"
+                genre="Fantasy"
+                description="Immerse yourself in a celestial love story as a banished being explores the complexities of human emotions and relationships. 'Celestial Reverie' is a tale of forbidden love, cosmic wanderings, and the eternal search for understanding the threads that connect hearts across realms."
+              >
+                <img src="Data/Celestial Reverie.jpeg" />
+              </div>
+
+              <div
+                class="weekly_featured_card"
+                onclick="switchNovelCard(this)"
+                novelID="2"
+                name="Whispers of the Enchanted Realm"
+                author="MysticInkwell"
+                genre="Fantasy"
+                description="Uncover the secrets of a forgotten kingdom as a reluctant heir embarks on a quest through magical forests, ancient castles, and mystical realms. 'Whispers of the Enchanted Realm' blends elements of fantasy and mystery, promising a captivating journey filled with hidden powers, ancient prophecies, and the echoes of a bygone era."
+              >
+                <img src="Data/Whispers of the Enchanted Realm.jpeg" />
+              </div>
+
+              <div
+                class="weekly_featured_card"
+                onclick="switchNovelCard(this)"
+                novelID="1"
+                name="Ephemeral Echoes"
+                author="QuantumQuill"
+                genre="Sci-Fi"
+                description="In the mysterious town of Evercrest, residents confront rewritten memories and hidden abilities. Newcomer Alex Harper unearths 'The Arcane Enigma,' sparking a perilous journey with eclectic allies. As time twists, they navigate forgotten memories and face reality-altering consequences. 'Ephemeral Echoes' weaves suspense, supernatural intrigue, and psychological twists, exploring identity and destiny in Evercrest's enigmatic past."
+              >
+                <img src="Data/Novel_1_Icon.png" />
+              </div>
+            </div>
+
+            <div class="weekly_featured_selection_text">
+              <strong
+                class="novel_paragraph"
+                data-max-chars="15"
+                id="novel_button"
+                novelID="1"
+                >DISPLAY NAME</strong
+              >
+              <div class="weekly_featured_selection_text_data">
+                <p style="margin-right: 5px" id="weekly_featured_genre">
+                  GENRE
+                </p>
+                <div></div>
+                <p
+                  style="margin-left: 5px; color: black"
+                  id="weekly_featured_author"
+                >
+                  AUTHORS NAME
+                </p>
+              </div>
+              <p
+                class="novel_paragraph"
+                data-max-chars="450"
+                style="color: #83848f"
+                id="weekly_featured_description"
+              ></p>
+            </div>
+          </div>
+
+          <!-- Novels grid 5x2 -->
+          <div class="weekly_featured_options">
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="4"
+              >
+                <img src="Data/Whispers of the Forgotten Kingdom.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="15"
+                id="novel_button"
+                novelID="4"
+                >Whispers of the Forgotten Kingdom</strong
+              >
+              <p>Fantasy</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="5"
+              >
+                <img src="Data/Eternal Eclipse.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="5"
+                >Eternal Eclipse</strong
+              >
+              <p>Sci-Fi</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="6"
+              >
+                <img src="Data/Chronicles of the Celestial Nomad.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="6"
+                >Chronicles of the Celestial Nomad</strong
+              >
+              <p>Fantasy</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="7"
+              >
+                <img src="Data/Infinite Reflections.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="7"
+                >Infinite Reflections</strong
+              >
+              <p>Fantasy</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="8"
+              >
+                <img src="Data/The Clockwork Conundrum.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="8"
+                >The Clockwork Conundrum</strong
+              >
+              <p>Steampunk</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="9"
+              >
+                <img src="Data/Dreamweaver's Dilemma.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="9"
+                id="novel_button"
+                novelID="9"
+                >Dreamweaver's Dilemma</strong
+              >
+              <p>Fantasy</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="10"
+              >
+                <img src="Data/Sirens of Serenity Harbor.png" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="10"
+                >Sirens of Serenity Harbor</strong
+              >
+              <p>Fantasy</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="11"
+              >
+                <img src="Data/Quantum Shadows.jpg" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="11"
+                >Quantum Shadows</strong
+              >
+              <p>Sci-Fi</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="12"
+              >
+                <img src="Data/Rogue Stars.jpg" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="12"
+                >Rogue Stars</strong
+              >
+              <p>Sci-Fi</p>
+            </div>
+
+            <div class="weekly_featured_options_item">
+              <div
+                class="weekly_featured_options_item_icon_container"
+                id="novel_button"
+                novelID="13"
+              >
+                <img src="Data/The Elemental Alchemist.jpg" />
+              </div>
+              <strong
+                class="novel_paragraph"
+                data-max-chars="10"
+                id="novel_button"
+                novelID="13"
+                >The Elemental Alchemist</strong
+              >
+              <p>Fantasy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        Javascript
+      -->
+
+      <!--Page loaded, set up whatever javascript needs-->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Link transfer to novels
+          function navigateToPage(url, data) {
+            // Convert the data object to a query string
+            var queryString = Object.keys(data)
+              .map((key) => key + "=" + encodeURIComponent(data[key]))
+              .join("&");
+
+            // Append the query string to the URL
+            var destinationURL = url + "?" + queryString;
+
+            // Navigate to the new page
+            window.location.href = destinationURL;
+          }
+
+          var navbarRelays = document.querySelectorAll("#navbar_relay");
+          navbarRelays.forEach(function (navbarRelay) {
+            const pageName = navbarRelay.getAttribute("linkName");
+            navbarRelay.addEventListener("click", function () {
+              navigateToPage(pageName, {
+                origin: navbarRelay.getAttribute("origin"),
+              });
+            });
+          });
+
+          var reloadRelays = document.querySelectorAll("#reload_button");
+          reloadRelays.forEach(function (reloadRelay) {
+            reloadRelay.addEventListener("click", function () {
+              navigateToPage("index.html", {});
+            });
+          });
+
+          var novelRelays = document.querySelectorAll("#novel_button");
+          novelRelays.forEach(function (novelRelay) {
+            novelRelay.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelRelay.getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+
+          // Call middle card to automatically display on start
+          const cardsContainer = document.querySelector(
+            ".weekly_featured_selection_visual"
+          );
+          if (cardsContainer) {
+            switchNovelCard(cardsContainer.children[2]);
+          }
+
+          // Functions to handle updates
+          function truncateTextContent(element, maxCharacters) {
+            var text = element.textContent;
+            if (text.length > maxCharacters) {
+              element.textContent = text.slice(0, maxCharacters) + "...";
+            }
+          }
+          function handleMutations(mutationsList) {
+            mutationsList.forEach(function (mutation) {
+              if (
+                mutation.type === "characterData" ||
+                mutation.type === "childList"
+              ) {
+                truncateTextContent(
+                  mutation.target,
+                  parseInt(mutation.target.getAttribute("data-max-chars"), 10)
+                );
+              }
+            });
+          }
+
+          // Set up instances
+          var observer = new MutationObserver(handleMutations);
+          var paragraphs = document.querySelectorAll(".novel_paragraph");
+          paragraphs.forEach(function (paragraph) {
+            var maxCharacters = parseInt(
+              paragraph.getAttribute("data-max-chars"),
+              10
+            );
+            if (!isNaN(maxCharacters) && maxCharacters > 0) {
+              truncateTextContent(paragraph, maxCharacters);
+              observer.observe(paragraph, {
+                subtree: true,
+                characterData: true,
+                childList: true,
+              });
+            }
+          });
+        });
+      </script>
+
+      <!--Choose a card in weekly featured-->
+      <script>
+        function switchNovelCard(card) {
+          // Fill out data
+          const displayElement = document.querySelector(
+            ".weekly_featured_selection_text"
+          );
+          if (!displayElement) {
+            console.log(
+              "[index.html -> switchNovelCard] Could not find .weekly_featured_selection_text class!"
+            );
+            return;
+          }
+
+          const displayName = displayElement.querySelector("strong");
+          if (!displayName)
+            console.log(
+              "[index.html -> switchNovelCard] Could not find <strong> to display name in!"
+            );
+          const description = document.getElementById(
+            "weekly_featured_description"
+          );
+          if (!description)
+            console.log(
+              "[index.html -> switchNovelCard] Could not find <p> to display description in!"
+            );
+          const genre = document.getElementById("weekly_featured_genre");
+          if (!genre)
+            console.log(
+              "[index.html -> switchNovelCard] Could not find genre element!"
+            );
+          const author = document.getElementById("weekly_featured_author");
+          if (!author)
+            console.log(
+              "[index.html -> switchNovelCard] Could not find author element!"
+            );
+
+          description.textContent = card.getAttribute("description");
+          displayName.textContent = card.getAttribute("name");
+          author.textContent = card.getAttribute("author");
+          genre.textContent = card.getAttribute("genre");
+          displayName.setAttribute("novelID", card.getAttribute("novelID"));
+
+          // Put blurred image as background
+          const background = document.getElementById(
+            "weekly_featured_background"
+          );
+          background.style.backgroundImage = `url('${
+            card.querySelector("img").src
+          }')`;
+
+          // Put card in middle
+          const container = card.parentElement;
+          if (container.children[1] == card) {
+            container.insertBefore(card, container.children[3]);
+          } else {
+            container.insertBefore(card, container.children[2]);
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="browse_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar_left">
+        <div
+          class="navbar_icon"
+          style="transform: scale(1.25)"
+          id="reload_button"
+        >
+          <img src="Data/WebIcon.jpeg" style="transform: scale(2)" />
+        </div>
+        <button class="navbar_button" id="navbar_relay" linkName="browse.html">
+          <i class="fa-solid fa-compass"></i>
+          <strong>Browse</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="rankings.html"
+        >
+          <i class="fa-solid fa-list"></i>
+          <strong>Rankings</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="create"
+        >
+          <i class="fa-solid fa-pen-nib"></i>
+          <strong>Create</strong>
+        </button>
+        <button class="navbar_button">
+          <i class="fa-solid fa-trophy"></i>
+          <strong>Contest</strong>
+        </button>
+      </div>
+
+      <div class="navbar_right">
+        <button class="navbar_search">
+          <i class="fa-solid fa-magnifying-glass" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="library"
+        >
+          Library
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="forum"
+        >
+          Forum
+        </button>
+        <button class="navbar_settings">
+          <i class="fa-solid fa-gear" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_sign_in"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="login"
+        >
+          Sign In
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="genres">
+        <strong id="genre_header"
+          >Genre of Novels
+          <i class="fa-solid fa-chevron-up"></i>
+        </strong>
+
+        <div class="genre_leads">
+          <button>MALE LEAD</button>
+          <button>FEMALE LEAD</button>
+        </div>
+
+        <div class="genres_list">
+          <button>All</button>
+          <button>Urban</button>
+
+          <button>Eastern</button>
+          <button>Games</button>
+
+          <button>Fantasy</button>
+          <button>Sci-fi</button>
+
+          <button>Horror</button>
+          <button>Sports</button>
+
+          <button>Action</button>
+          <button>War</button>
+
+          <button>Realistic</button>
+          <button>History</button>
+
+          <button>ACG</button>
+        </div>
+      </div>
+
+      <div class="novels">
+        <div class="novels_sort">
+          <strong>Sort By</strong>
+          <div>
+            <button>Popular</button>
+            <button>Recommended</button>
+            <button>Most collections</button>
+            <button>Rating</button>
+            <button>Time updated</button>
+          </div>
+        </div>
+
+        <div class="novels_items">
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="1">
+              <img src="Data/Novel_1_Icon.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># SCI-FI</strong>
+                <strong class="hashtag"># ADVENTURE</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="1"
+                >Ephemeral Echoes</strong
+              >
+
+              <p id="novel_items_description">
+                In the perpetual twilight of a dystopian future, "Ephemeral
+                Echoes" follows Livia Nova and her band of time-traveling rebels
+                armed with mysterious artifacts. Against the backdrop of a city
+                under an eternal eclipse, the story unfolds with high-stakes
+                heists and mind-bending paradoxes, challenging the boundaries of
+                time in a thrilling blend of science fiction and temporal
+                intrigue.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.31</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">831</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="3">
+              <img src="Data/Celestial Reverie.jpeg" />
+            </div>
+
+            <div class="novel_item_text" novelID="3">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># ROMANCE</strong>
+              </div>
+
+              <strong class="novel_item_displayName">Celestial Reverie</strong>
+
+              <p id="novel_items_description">
+                In the cosmic expanse above, "Celestial Reverie" tells the tale
+                of Celestia, a banished celestial being, drifting among
+                celestial planes. Drawn by an unseen force, she descends to the
+                mortal realm, wandering through bustling cities and quiet
+                meadows. As she observes a love story unfold in Serenity Harbor,
+                Celestia realizes her journey is intertwined with mortal
+                destinies. "Celestial Reverie" promises an ethereal exploration
+                of forbidden love and cosmic forces, seamlessly blending the
+                celestial and earthly realms in a captivating narrative.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.91</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">2510</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="2">
+              <img src="Data/Whispers of the Enchanted Realm.jpeg" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># MYSTERY</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="2"
+                >Whispers of the Enchanted Realm</strong
+              >
+
+              <p id="novel_items_description">
+                In the heart of ancient woods, "Whispers of the Enchanted Realm"
+                follows Luna, a reluctant heir, wielding a glowing key into the
+                mystical castle of Eldrith. Guided by ethereal whispers, Luna
+                encounters magical creatures and discovers fragments of a
+                prophecy, delving deeper into the mysteries of the castle. The
+                novel promises an enchanting journey through forgotten legends
+                and hidden powers, where Luna's connection to the Enchanted
+                Realm unveils a destiny beyond imagination.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.49</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1309</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="4">
+              <img src="Data/Whispers of the Forgotten Kingdom.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># ADVENTURE</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="4"
+                >Whispers of the Forgotten Kingdom</strong
+              >
+
+              <p id="novel_items_description">
+                "Whispers of the Forgotten Kingdom" immerses readers in a realm
+                where memories are the currency of power. In this captivating
+                narrative, a forgotten heir must navigate a world of forgotten
+                kingdoms and ancient secrets to reclaim their birthright. As the
+                protagonist delves into the depths of the past, the story
+                unfolds with mysterious whispers, unveiling a tapestry of
+                forgotten legends and hidden conspiracies. This fantasy
+                adventure promises a riveting journey where the echoes of the
+                past shape the destiny of the forgotten kingdom.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.56</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1224</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="13">
+              <img src="Data/The Elemental Alchemist.jpg" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># ADVENTURE</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="13"
+                >The Elemental Alchemist</strong
+              >
+
+              <p id="novel_items_description">
+                "The Elemental Alchemist" invites readers into a mystical
+                laboratory where an outcast alchemist discovers a forbidden art.
+                As they manipulate the core elements and embark on a quest for
+                self-discovery, the story unfolds against a backdrop of bubbling
+                potions and swirling elemental energies. The novel promises a
+                captivating blend of fantasy and adventure, where the
+                protagonist's journey reveals the secrets of ancient books and
+                the power within the floating crystals. "The Elemental
+                Alchemist" is a tale of magic, exploration, and the alchemical
+                pursuit of unlocking the essence of the elements.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.44</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1142</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="8">
+              <img src="Data/The Clockwork Conundrum.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># STEAMPUNK</strong>
+                <strong class="hashtag"># MYSTERY</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="8"
+                >The Clockwork Conundrum</strong
+              >
+
+              <p id="novel_items_description">
+                In the city where time is a mechanism, "The Clockwork Conundrum"
+                introduces readers to a world of intricate gears and steampunk
+                marvels. A group of rebels takes center stage, wielding
+                mysterious time-manipulating devices. As they navigate through
+                towering skyscrapers and face the consequences of meddling with
+                the fabric of the multiverse, the story unfolds with a conundrum
+                that challenges the very essence of time. This steampunk mystery
+                promises a thrilling adventure, where the ticking of gears
+                echoes the suspense of a clockwork enigma waiting to be
+                unraveled.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.59</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">905</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="10">
+              <img src="Data/Sirens of Serenity Harbor.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># MYSTERY</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="10"
+                >Sirens of Serenity Harbor</strong
+              >
+
+              <p id="novel_items_description">
+                "Sirens of Serenity Harbor" unfolds in a coastal town haunted by
+                mysterious disappearances, attributed to the seductive sirens
+                who emerge from the depths of the sea. As a skeptical
+                investigator delves into the enchanting yet perilous waters, the
+                narrative weaves a tale of captivating sirens and the lighthouse
+                that stands as the sentinel of secrets. The moonlit harbor
+                becomes the stage for a mysterious romance, where the
+                investigator must navigate the allure of the sirens and the
+                haunting melodies that echo through the Serenity Harbor. This
+                fantasy mystery promises a journey through enchantment, danger,
+                and the hidden depths of an aquatic world.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.82</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1831</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="12">
+              <img src="Data/Rogue Stars.jpg" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># SCI-FI</strong>
+                <strong class="hashtag"># ADVENTURE</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="12"
+                >Rogue Stars</strong
+              >
+
+              <p id="novel_items_description">
+                "Rogue Stars" thrusts readers into a galaxy governed by powerful
+                corporations, where a group of space pirates discovers a hidden
+                planet holding the key to shifting the balance of power. Against
+                the backdrop of sleek spaceships navigating asteroid fields and
+                unknown galaxies, the story unfolds with high-stakes adventures
+                and interstellar escapades. Led by a charismatic captain armed
+                with a map to the hidden planet, the crew must decide whether to
+                exploit its potential or protect it from those who seek to
+                control the universe. "Rogue Stars" promises an exhilarating
+                space opera filled with cosmic exploration, space battles, and
+                the pursuit of freedom in the vastness of the cosmos.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.62</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1721</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="11">
+              <img src="Data/Quantum Shadows.jpg" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># SCI-FI</strong>
+                <strong class="hashtag"># ADVENTURE</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="11"
+                >Quantum Shadows</strong
+              >
+
+              <p id="novel_items_description">
+                "Quantum Shadows" delves into a world where a brilliant
+                scientist accidentally creates a device revealing glimpses into
+                parallel timelines. The narrative unfolds as the central figure
+                stands at the nexus of swirling vortexes and overlapping
+                dimensions, holding a device that emits quantum shadows. As they
+                witness different versions of their life, the story navigates
+                ethical dilemmas and the unintended consequences of tampering
+                with the fabric of reality. "Quantum Shadows" promises a
+                mind-bending journey through the mysteries of science fiction,
+                where the boundaries between alternate realities blur, and the
+                protagonist grapples with the profound impact of their creation.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.53</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1602</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="7">
+              <img src="Data/Infinite Reflections.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># SCI-FI</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="7"
+                >Infinite Reflections</strong
+              >
+
+              <p id="novel_items_description">
+                "Infinite Reflections" immerses readers in a world where a
+                gifted artist discovers that their paintings serve as portals to
+                parallel dimensions. The narrative unfolds on a surreal canvas,
+                divided into panels depicting different worlds. A hand reaching
+                out from the center panel holds a paintbrush creating ripples
+                across various landscapes. As the artist explores alternate
+                realities, the story weaves through the consequences of meddling
+                with the multiverse. "Infinite Reflections" promises a
+                fantastical adventure filled with artistic wonder, surreal
+                landscapes, and the unforeseen challenges of navigating the
+                boundless reflections of existence.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.32</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1523</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="5">
+              <img src="Data/Eternal Eclipse.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># SCI-FI</strong>
+                <strong class="hashtag"># FANTASY</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="5"
+                >Eternal Eclipse</strong
+              >
+
+              <p id="novel_items_description">
+                "Eternal Eclipse" paints a vivid picture of a mysterious
+                phenomenon shrouding the world in perpetual darkness. The
+                narrative unfolds in a futuristic cityscape where a group of
+                unlikely heroes discovers ancient artifacts that hold the key to
+                breaking the curse and restoring the sun. Against the backdrop
+                of towering skyscrapers casting long shadows, the story dives
+                into the high-stakes quest of these individuals as they navigate
+                through a world where time and light have become precious
+                commodities. "Eternal Eclipse" promises a gripping sci-fi
+                adventure, blending elements of fantasy and mystery as the
+                characters embark on a quest to unveil the secrets hidden within
+                the everlasting twilight.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.27</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">856</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="novel_item">
+            <div class="novel_item_icon" novelID="9">
+              <img src="Data/Dreamweaver's Dilemma.png" />
+            </div>
+
+            <div class="novel_item_text">
+              <div>
+                <strong class="hashtag"># FANTASY</strong>
+                <strong class="hashtag"># MYSTERY</strong>
+              </div>
+
+              <strong class="novel_item_displayName" novelID="9"
+                >Dreamweaver's Dilemma</strong
+              >
+
+              <p id="novel_items_description">
+                "Dreamweaver's Dilemma" introduces readers to a young
+                dreamweaver caught between the real world and a fantastical
+                dream realm. The narrative unfolds as the protagonist navigates
+                the complexities of human emotions and relationships,
+                discovering the true meaning of existence. Against the backdrop
+                of a dreamscape merging with reality, the story presents a
+                surreal journey where nightmares escape into the waking world.
+                As the dreamweaver grapples with their own fears, the novel
+                promises a blend of fantasy and mystery, exploring the boundary
+                between dreams and reality and the dilemmas that arise from the
+                intertwining of both realms.
+              </p>
+
+              <div>
+                <button>
+                  <i class="fa-sharp fa-solid fa-star" id="novel_item_data"></i>
+                  <strong id="novel_item_data">4.49</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-file" id="novel_item_data"></i>
+                  <strong id="novel_item_data">1216</strong>
+                </button>
+
+                <button>
+                  <i class="fa-solid fa-circle-plus" id="library_add"></i>
+                  <strong id="library_add">ADD</strong>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content_end">
+          <p>
+            End of our tales...
+            <i class="fa-solid fa-face-sad-tear"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Genres
+        const rankingDisplay = document.querySelector("#genre_header");
+        const stateDisplay = document.querySelector("#genre_header i");
+        const genreLeads = document.querySelector(".genre_leads");
+        const rankingContainer = document.querySelector(".genres_list");
+        rankingDisplay.addEventListener("click", function () {
+          if (rankingContainer.style.display == "none") {
+            rankingContainer.style.display = "grid";
+            genreLeads.style.display = "flex";
+            stateDisplay.classList = "fa-solid fa-chevron-up";
+          } else {
+            rankingContainer.style.display = "none";
+            genreLeads.style.display = "none";
+            stateDisplay.classList = "fa-solid fa-chevron-down";
+          }
+        });
+
+        const genreButtons = document.querySelectorAll(".genres_list button");
+        genreButtons.forEach(function (genreButton) {
+          genreButton.addEventListener("click", function () {
+            // Reset buttons
+            genreButtons.forEach(function (button) {
+              button.style.background = "";
+              button.style.color = "";
+            });
+
+            genreButton.style.background = "#3b66f5";
+            genreButton.style.color = "#fff";
+          });
+        });
+
+        const sortButtons = document.querySelectorAll(".novels_sort button");
+        sortButtons.forEach(function (sortButton) {
+          sortButton.addEventListener("click", function () {
+            // Reset buttons
+            sortButtons.forEach(function (button) {
+              button.style.background = "";
+              button.style.color = "";
+            });
+
+            sortButton.style.background = "#3b66f5";
+            sortButton.style.color = "#fff";
+          });
+        });
+
+        // Link transfer to novels
+        function navigateToPage(url, data) {
+          // Convert the data object to a query string
+          var queryString = Object.keys(data)
+            .map((key) => key + "=" + encodeURIComponent(data[key]))
+            .join("&");
+
+          // Append the query string to the URL
+          var destinationURL = url + "?" + queryString;
+
+          // Navigate to the new page
+          window.location.href = destinationURL;
+        }
+
+        var reloadRelays = document.querySelectorAll("#reload_button");
+        reloadRelays.forEach(function (reloadRelay) {
+          reloadRelay.addEventListener("click", function () {
+            navigateToPage("index.html", {});
+          });
+        });
+
+        var navbarRelays = document.querySelectorAll("#navbar_relay");
+        navbarRelays.forEach(function (navbarRelay) {
+          const pageName = navbarRelay.getAttribute("linkName");
+          navbarRelay.addEventListener("click", function () {
+            navigateToPage(pageName, {
+              origin: navbarRelay.getAttribute("origin"),
+            });
+          });
+
+          // Add to library, just send user to sign in page
+          var libraryAdds = document.querySelectorAll("#library_add");
+          libraryAdds.forEach(function (libraryAdd) {
+            libraryAdd.addEventListener("click", function () {
+              navigateToPage("login.html", {
+                origin: "add",
+              });
+            });
+          });
+
+          // Open novels
+          var novelIcons = document.querySelectorAll(".novel_item_icon");
+          novelIcons.forEach(function (novelIcon) {
+            novelIcon.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelIcon.getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+
+          var novelNames = document.querySelectorAll(".novel_item_displayName");
+          novelNames.forEach(function (novelName) {
+            novelName.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelName.getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

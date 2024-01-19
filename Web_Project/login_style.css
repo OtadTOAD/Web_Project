@@ -1,0 +1,457 @@
+html{
+    height: -webkit-fill-available
+} 
+body{
+    margin: 0;
+    position: relative;
+    height: 99.55%;
+    width: 100%;
+}
+.main{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+#left{
+    height: 100%;
+    width: 50%;
+    float: left
+}
+#right{
+    height: 100%;
+    width: 50%;
+    float: right
+}
+
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    background-image: url("Data/SignInBackground.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+}
+
+.login{
+    box-shadow: 0 20px 24px -4px rgba(20, 27, 44, .08), 0 8px 8px -4px rgba(20, 27, 44, .03);
+    border: 1px solid rgba(20, 27, 44, .12);
+    border-radius: 16px;
+    background: #fff;
+    text-align: center;
+
+    position: absolute;
+    right: 10%;
+    top: 25%;
+
+    width: 382px;
+    height: 462px;
+    padding: 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.login img{
+    width: 20%;
+    height: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 50%;
+    border: rgba(177, 177, 177, 0.192) 2px solid;
+    box-shadow: 0 20px 24px -4px rgba(20, 27, 44, 0.185), 0 8px 8px -4px rgba(20, 27, 44, 0.219);
+}
+.login strong{
+    font-size: x-large;
+    text-wrap: nowrap;
+    width: 100%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.login p{
+    color: rgba(20, 27, 44, .6);
+}
+
+.logo{
+    transform: scale(1.15);
+    border-radius: 50%;
+    border: rgba(177, 177, 177, 0.192) 2px solid;
+    box-shadow: 0 20px 24px -4px rgba(20, 27, 44, 0.185), 0 8px 8px -4px rgba(20, 27, 44, 0.219);
+    width: 70px;
+    height: 70px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+
+    margin-left: 50%;
+    transform: translateX(-50%) scale(1.75);
+    object-fit: cover;
+}
+
+.login_header{
+    font-weight: 400;
+}
+.sign_in{
+    background: #0172f0;
+    width: 100%;
+    height: 44px;
+    color: #fff;
+    border: 0px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.sign_in:hover{
+    background-color: #2b8eff;
+    transition: .1s;
+}
+
+.sign_up{
+    width: 100%;
+    height: 22px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    font-size: medium;
+    text-wrap: nowrap;
+}
+.sign_up strong{
+    font-size: small;
+    width: 65px;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 1px;
+    margin-left: 8px;
+}
+.signUp_button:hover{
+    text-decoration: underline;
+}
+
+.terms_of_service{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-wrap: nowrap;
+
+    width: 100%;
+    height: 16px;
+
+    font-family: 'Inter', sans-serif;
+}
+.terms_of_service p{
+    font-size: small;
+    margin: 0px;
+    text-align: center;
+    line-height: 16px;
+    margin-right: 5px;
+}
+
+.terms_button{
+    cursor: pointer
+}
+.terms_button:hover{
+    text-decoration: underline;
+}
+
+
+.sponsors{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+.sponsors div{
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+}
+.sponsors img{
+    margin: auto;
+}
+.sponsors strong{
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 5px;
+
+    height: 50%;
+    font-size: small;
+    margin: 0px;
+
+    font-weight: 400;
+}
+
+
+.big_logo{
+    position: absolute;
+    left: 10%;
+    top: 0px;
+
+    width: 45%;
+    height: 100%;
+    float: left;
+    margin: auto;
+}
+.big_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+/*Sign in UI*/
+.top_cover{
+    width: 100%;
+    height: 5px;
+    background-color: #3b66f5;
+    transform: translateX(-24px);
+    padding: 0px 24px 0px 24px;
+}
+.login_inputs{
+    display: none;
+    position: absolute;
+    margin: auto;
+    flex-direction: column;
+    justify-content: start;
+
+    width: 100%;
+    max-width: 440px;
+    height: 570px;
+    background: white;
+    padding: 0px 24px 24px 24px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+}
+/* ::before pseudo-element to create a background image with transparency */
+.login_inputs::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('Data/Login_background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.login_inputs p, .login_inputs strong{
+    text-align: center;
+}
+.main_login_choices_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondary_login_choices_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.secondary_login_choices_container i{
+    height: 35px;
+    width: 35px;
+    background: #0172f0;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: x-large;
+    color: white;
+    line-height: 150%;
+    border: rgba(128, 128, 128, 0.411) 1px solid;
+    cursor: pointer;
+}
+
+.seperator{
+    width: 100%;
+    height: 1px;
+    background: gray;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.web_logo{
+    width: 50px;
+    height: 50px;
+}
+.login_icon{
+    width: 65px;
+    height: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 9px;
+}
+.login_icon img{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+}
+
+.login_inputs_displayName{
+    font-size: 20px;
+}
+.login_inputs_displayDescription{
+    color: gray;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.main_login_choices_container{
+    width: 100%;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-bottom: 12px;
+}
+.main_login_choices_container i{
+    height: 150%;
+    width: auto;
+    font-size: x-large;
+    margin: auto;
+    color: white;
+    line-height: 18px;
+
+}
+.main_login_choices_container strong{
+    width: 100%;
+    height: 100%;
+    font-size: small;
+    line-height: 18px;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    font-family: 'SF Pro Text', sans-serif;
+    color: white;
+}
+.main_login_choices_container button{
+    width: 80%;
+    height: 48px;
+    padding: 12px 24px 12px 24px;
+    margin-bottom: 8px;
+    border-radius: 80px;
+    border: grey 1px solid;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+}
+.main_login_choices_container button:hover{
+    filter: brightness(1.1);
+}
+.text_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.text_container p{
+    color: gray;
+    font-size: small;
+    margin: 0px;
+}
+
+.policy_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.policy_container p{
+    color: gray;
+    font-size: small;
+}
+.info_seperator{
+    height: 35%;
+    width: 1px;
+    background: gray;
+    margin-top: auto;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: auto;
+}
+
+#create_redirect:hover{
+    text-decoration: underline;
+}
+.login_exit{
+    width: 100%;
+    height: 15px;
+    text-align: right;
+
+    margin: 0px;
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.login_exit i{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .main{
+        flex-direction: column;
+    }
+    #left{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    #right{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 25px;
+    }
+
+    .login{
+        position: relative;
+        width: 325px;
+
+        margin: auto;
+        top: 0px;
+        right: 0px;
+
+        margin-bottom: 50px;
+    }
+    .big_logo{
+        width: 100%;
+        height: 50%;
+
+        position: absolute;
+        top: -55px;
+        left: 0px;
+    }
+}

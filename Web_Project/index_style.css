@@ -1,0 +1,559 @@
+/*Root*/
+strong, p, a {
+    font-family: 'Archivo', sans-serif;
+}
+button {
+    font-family: 'Nunito Sans', sans-serif;
+}
+strong {
+    color: rgb(18 18 23 / 90%);
+}
+
+/*Navbar*/
+.navbar{
+    width: 100%;
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+
+    border-bottom: 1px solid #83848f3a
+}
+.navbar_left{
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+.navbar_right{
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+
+.navbar_search{
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: #83848f;
+    height: 40px;
+    width: 40px;
+}
+.navbar_search i{
+    font-size: 16px;
+}
+.navbar_settings{
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    width: 40px;
+    height: 40px;
+}
+.navbar_settings i{
+    width: 100%;
+    font-size: 24px;
+}
+.navbar_other_button{
+    width: 80px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #83848f;
+    cursor: pointer;
+}
+.navbar_sign_in{
+    margin-left: 10px;
+    width: 90px;
+    border-radius: 25px;
+    background-color: #0172f0;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-width: 0px;
+    cursor: pointer;
+}
+.navbar_sign_in:hover{
+    background-color: #2b8eff;
+    transition: .1s;
+}
+
+
+.navbar_icon img{
+    width: 100%;
+    height: 100%;
+}
+.navbar_icon{
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar_button{
+    width: 90px;
+    height: 100%;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    
+    cursor: pointer;
+}
+.navbar_button i{
+    color: #83848f;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    line-height: 38px;
+    font-size: 24px;
+}
+.navbar_button strong{
+    margin-left: 8px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #83848f;
+}
+
+.navbar_button:hover i, .navbar_button:hover strong, .navbar_other_button:hover{
+    color: blue;
+    transition: .25s;
+}
+
+/*Content*/
+.content{
+    width: 100%;
+    height: 950px;
+    background-color: rgba(0, 0, 255, 0);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+}
+.content_segment{
+    height: 425px;
+    width: 1005px;
+    background-color: rgba(255, 0, 0, 0);
+    margin-right: auto;
+    margin-left: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#content_segment_1{
+    margin-top: 56px
+}
+#content_segment_2{
+    height: 475px;
+    flex-direction: column; 
+    justify-content: start
+}
+
+/*Display weekly book selection*/
+.weekly_book{
+    float: left;
+    height: 100%;
+    width: 47%;
+    padding-left: 3%;
+    margin-right: 2.5%;
+}
+.weekly_book strong{
+    font-size: 32px;
+    color: rgba(18,18,23,0.9);
+}
+
+.weekly_book_display{
+    width: 88%;
+    height: 75%;
+    margin-top: 5%;
+    border-radius: 8px;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+.weekly_book_display::before{
+    content: "";
+    position: absolute;
+    background: url('Data/Novel_1_Icon.png') center/cover no-repeat;
+    filter: blur(10px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.weekly_book_display img{
+    position: relative;
+    z-index: 1;
+    width: 35%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 5%;
+
+    border: #83848f2d outset;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.26);
+}
+.weekly_book_display strong{
+    color: white;
+    height: 20%;
+    font-size: xx-large;
+}
+.weekly_book_display p{
+    color: white;
+    height: 65%;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: large;
+    font-weight: lighter;
+}
+
+/*Display information about webnovel*/
+.weekly_info{
+    float: right;
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+.weekly_info strong{
+    font-size: xx-large;
+    padding-bottom: 2.5%;
+}
+
+.weekly_info_section{
+    height: 25%;
+    width: 100%;
+    border-bottom: #83848f2d outset 1px;
+    border-top: #83848f2d outset 1px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.weekly_info_section div{
+    margin-top: 2.75%;
+    width: 80%;
+    height: 80%;
+}
+.weekly_info_section strong{
+    font-size: large;
+    padding-top: 5%;
+    margin-top: 5%;
+}
+.weekly_info_section p{
+    color: #83848f;
+    margin-top: 5px;
+}
+.weekly_info_section img{
+    position: relative;
+    margin: auto;
+    z-index: 1;
+    width: 30%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 5%;
+}
+
+/*Display weekly featured novels*/
+.weekly_featured{
+    width: 100%;
+    height: 83.5%;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: #83848f2d outset 1px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.weekly_featured_selection{
+    width: 35%;
+    height: 100%;
+    padding-right: 25px;
+}
+
+.weekly_featured_options{
+    width: 65%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+.weekly_featured_options_item{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-radius: 8px;
+    box-sizing: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.weekly_featured_options_item_icon_container{
+    width: 100%;
+    max-width: 100%;
+    height: 75%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.weekly_featured_options_item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.weekly_featured_options_item strong{
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 5px;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.weekly_featured_options_item p{
+    cursor: pointer;
+    color: #83848f;
+    font-size: medium;
+    margin-bottom: 5px;
+    margin: 0px;
+    text-align: left;
+}
+
+.weekly_featured_options_item img:hover{
+    transform: scale(1.2);
+}
+.weekly_featured_options_item strong:hover{
+    text-decoration: underline;
+}
+.weekly_featured_options_item p:hover{
+    text-decoration: underline;
+}
+
+/*Display Top 3 features novels*/
+.weekly_featured_selection_visual{
+    height: 45%;
+    width: 100%;
+    position: relative;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+}
+.weekly_featured_background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.weekly_featured_card{
+    width: 26%;
+    height: 70%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    /*Centers cards*/
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.weekly_featured_card img{
+    width: auto;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.weekly_featured_card img:hover{
+    transform: translateX(-50%) scale(1.2);
+    transition: transform 0.5s;
+}
+
+.weekly_featured_selection_visual :nth-child(3){
+    transform: scale(1.2);
+    position: relative;
+    z-index: 2;
+}
+
+
+.weekly_featured_selection_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.weekly_featured_selection_text strong{
+    font-size: x-large;
+    text-align: center;
+}
+
+.weekly_featured_selection_text_data{
+    width: 100%;
+    height: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.weekly_featured_selection_text_data p{
+    font-size: small;
+    color: #83848f;
+    margin: auto;
+}
+.weekly_featured_selection_text_data div{
+    border-radius: 50%;
+    background-color: black;
+    height: 2px;
+    width: 2px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.weekly_featured_selection_text strong:hover{
+    text-decoration: underline;
+}
+#weekly_featured_genre:hover{
+    text-decoration: underline;
+}
+
+/*Links*/
+#novel_button{
+    cursor: pointer;
+}
+
+/*Responsive code*/
+@media screen and (max-width: 1005px) {
+    /*Navbar*/
+    .navbar{
+        flex-direction: column;
+    }
+    .navbar_icon{
+        display: none;
+    }
+
+    .navbar_right{
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    .navbar_left{
+        width: 100%;
+    }
+
+    /*Content*/
+    .content{
+        height: 1650px;
+    }
+    .weekly_book_display div{
+        height: 90%;
+        margin: auto;
+
+        padding-top: 20px;
+        padding-bottom: 25px;
+    }
+
+    #content_segment_1{
+        height: 785px;
+    }
+    #content_segment_2{
+        height: 850px;
+    }
+    .content_segment{
+        padding-top: 20px;
+
+        justify-content: start;
+        flex-direction: column;
+
+        width: 500px;
+        height: 700px;
+    }
+    .weekly_book{
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .weekly_info{
+        width: 100%;
+    }
+
+    .weekly_featured{
+        justify-content: start;
+        flex-direction: column;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+
+
+
+    .weekly_featured_selection{
+        width: 100%;
+        height: 400px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .weekly_featured_selection_visual{
+        margin: auto;
+        height: 80%;
+        width: 50%;
+    }
+    .weekly_featured_card{
+        height: 35%;
+    }
+    .weekly_featured_selection_text{
+        margin: auto;
+        height: 90%;
+        width: 50%;
+        padding: 10px;
+    }
+
+    .weekly_featured_options{
+        width: 100%;
+    }
+}

@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ranking_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar_left">
+        <div
+          class="navbar_icon"
+          style="transform: scale(1.25)"
+          id="reload_button"
+        >
+          <img src="Data/WebIcon.jpeg" style="transform: scale(2)" />
+        </div>
+        <button class="navbar_button" id="navbar_relay" linkName="browse.html">
+          <i class="fa-solid fa-compass"></i>
+          <strong>Browse</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="rankings.html"
+        >
+          <i class="fa-solid fa-list"></i>
+          <strong>Rankings</strong>
+        </button>
+        <button
+          class="navbar_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="create"
+        >
+          <i class="fa-solid fa-pen-nib"></i>
+          <strong>Create</strong>
+        </button>
+        <button class="navbar_button">
+          <i class="fa-solid fa-trophy"></i>
+          <strong>Contest</strong>
+        </button>
+      </div>
+
+      <div class="navbar_right">
+        <button class="navbar_search">
+          <i class="fa-solid fa-magnifying-glass" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="library"
+        >
+          Library
+        </button>
+        <button
+          class="navbar_other_button"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="forum"
+        >
+          Forum
+        </button>
+        <button class="navbar_settings">
+          <i class="fa-solid fa-gear" style="color: #83848f"></i>
+        </button>
+        <button
+          class="navbar_sign_in"
+          id="navbar_relay"
+          linkName="login.html"
+          origin="login"
+        >
+          Sign In
+        </button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="ranking_types">
+        <strong id="ranking_header"
+          >Novel Ranking
+          <i class="fa-solid fa-chevron-up"></i>
+        </strong>
+
+        <div class="ranking_types_list">
+          <button>Power</button>
+          <button>Trending</button>
+
+          <button>Collect</button>
+          <button>Popular</button>
+
+          <button>Update</button>
+          <button>Active</button>
+
+          <button>Fandom</button>
+        </div>
+      </div>
+
+      <div class="novels">
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank" style="color: #eb1551">001</strong>
+            <img src="Data/Novel_1_Icon.png" novelID="1" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># SCI-FI</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="1"
+              >Ephemeral Echoes</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Sci-Fi
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">QuantumQuill</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank" style="color: #ff8d29">002</strong>
+            <img src="Data/Celestial Reverie.jpeg" novelID="3" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># ROMANCE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="3"
+              >Celestial Reverie</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">StarrySeraph</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank" style="color: #39cca0">003</strong>
+            <img src="Data/Whispers of the Enchanted Realm.jpeg" novelID="2" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="2"
+              >Whispers of the Enchanted Realm</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">MysticInkwell</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">004</strong>
+            <img src="Data/Whispers of the Forgotten Kingdom.png" novelID="4" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="4"
+              >Whispers of the Forgotten Kingdom</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">EtherealScribe</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">005</strong>
+            <img src="Data/Infinite Reflections.png" novelID="7" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># SCI-FI</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="7"
+              >Infinite Reflections</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">DimensionalPainter</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">006</strong>
+            <img src="Data/Sirens of Serenity Harbor.png" novelID="10" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+              <strong class="hashtag"># ROMANCE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="10"
+              >Sirens of Serenity Harbor</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">EnchantingLure</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">007</strong>
+            <img src="Data/Rogue Stars.jpg" novelID="12" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># SCI-FI</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+              <strong class="hashtag"># SPACE OPERA</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="12">Rogue Stars</strong>
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Sci-Fi
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">GalacticRogue</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">008</strong>
+            <img src="Data/The Clockwork Conundrum.png" novelID="8" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># STEAMPUNK</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="8"
+              >The Clockwork Conundrum</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Steampunk
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">CogCraftedTales</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">009</strong>
+            <img src="Data/Quantum Shadows.jpg" novelID="11" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># SCI-FI</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+              <strong class="hashtag"># DRAMA</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="11"
+              >Quantum Shadows</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Sci-Fi
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">QuantumWeaver</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">010</strong>
+            <img src="Data/Dreamweaver's Dilemma.png" novelID="9" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># MYSTERY</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="9"
+              >Dreamweaver's Dilemma</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">RealmDreamer</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">011</strong>
+            <img src="Data/Eternal Eclipse.png" novelID="5" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># SCI-FI</strong>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="5"
+              >Eternal Eclipse</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Sci-Fi
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">EclipseChronicle</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">012</strong>
+            <img src="Data/Chronicles of the Celestial Nomad.png" novelID="6" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># ROMANCE</strong>
+              <strong class="hashtag"># DRAMA</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="6"
+              >Chronicles of the Celestial Nomad</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">CelestialWanderer</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="novel_item">
+          <div class="novel_display">
+            <strong class="novel_rank">013</strong>
+            <img src="Data/The Elemental Alchemist.jpg" novelID="13" />
+          </div>
+
+          <div class="novel_description">
+            <div>
+              <strong class="hashtag"># FANTASY</strong>
+              <strong class="hashtag"># ADVENTURE</strong>
+              <strong class="hashtag"># MAGIC</strong>
+            </div>
+
+            <strong class="novel_displayName" novelID="13"
+              >The Elemental Alchemist</strong
+            >
+
+            <p class="novel_p_description">
+              Raze Cromwell was one who had suffered his entire life. A cruel
+              upbringing that had forced his nature to turn sour. In order to
+              survive, he did everything and
+            </p>
+
+            <div class="novel_data">
+              <p class="novel_score">
+                <i class="fa-solid fa-fire"></i>
+                3.0K
+              </p>
+
+              <div class="novel_data_seperator"></div>
+
+              <p class="novel_type">
+                Fantasy
+                <i
+                  class="fa-solid fa-circle"
+                  style="transform: scale(0.25); width: 4px"
+                ></i>
+                <strong style="text-align: left">AlchemyArcanist</strong>
+              </p>
+            </div>
+          </div>
+
+          <div class="novel_actions">
+            <strong
+              class="novel_add"
+              style="background-color: rgba(255, 255, 255, 0)"
+            >
+              <i class="fa-solid fa-circle-plus" id="library_add"></i>
+              ADD
+            </strong>
+            <strong class="novel_read" style="color: #fff">READ</strong>
+          </div>
+        </div>
+
+        <div class="content_end">
+          <p>
+            More stories coming soon...
+            <i class="fa-solid fa-hourglass-start"></i>
+          </p>
+        </div>
+      </div>
+
+      <!--Page loaded, set up whatever javascript needs-->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Rankings
+          const rankingDisplay = document.querySelector("#ranking_header");
+          const stateDisplay = document.querySelector("#ranking_header i");
+          const rankingContainer = document.querySelector(
+            ".ranking_types_list"
+          );
+          rankingDisplay.addEventListener("click", function () {
+            if (rankingContainer.style.display == "none") {
+              rankingContainer.style.display = "grid";
+              stateDisplay.classList = "fa-solid fa-chevron-up";
+            } else {
+              rankingContainer.style.display = "none";
+              stateDisplay.classList = "fa-solid fa-chevron-down";
+            }
+          });
+
+          const rankingButtons = document.querySelectorAll(
+            ".ranking_types_list button"
+          );
+          rankingButtons.forEach(function (rankingButton) {
+            rankingButton.addEventListener("click", function () {
+              // Reset buttons
+              rankingButtons.forEach(function (button) {
+                button.style.background = "";
+                button.style.color = "";
+              });
+
+              rankingButton.style.background = "#3b66f5";
+              rankingButton.style.color = "#fff";
+            });
+          });
+
+          // Link transfer to novels
+          function navigateToPage(url, data) {
+            // Convert the data object to a query string
+            var queryString = Object.keys(data)
+              .map((key) => key + "=" + encodeURIComponent(data[key]))
+              .join("&");
+
+            // Append the query string to the URL
+            var destinationURL = url + "?" + queryString;
+
+            // Navigate to the new page
+            window.location.href = destinationURL;
+          }
+
+          var navbarRelays = document.querySelectorAll("#navbar_relay");
+          navbarRelays.forEach(function (navbarRelay) {
+            const pageName = navbarRelay.getAttribute("linkName");
+            navbarRelay.addEventListener("click", function () {
+              navigateToPage(pageName, {
+                origin: navbarRelay.getAttribute("origin"),
+              });
+            });
+          });
+
+          // Redirect to sign in on add since that requires account
+          var addToLibrary = document.querySelectorAll(".novel_add");
+          addToLibrary.forEach(function (addButton) {
+            addButton.addEventListener("click", function () {
+              navigateToPage("login.html", {
+                origin: "add",
+              });
+            });
+          });
+
+          // Open novels
+          const novelIcons = document.querySelectorAll(".novel_display img");
+          novelIcons.forEach(function (novelIcon) {
+            novelIcon.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelIcon.getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+
+          const novelNames = document.querySelectorAll(".novel_displayName");
+          novelNames.forEach(function (novelName) {
+            novelName.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelName.getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+
+          const novelReads = document.querySelectorAll(".novel_read");
+          novelReads.forEach(function (novelRead) {
+            novelRead.addEventListener("click", function () {
+              navigateToPage("novel.html", {
+                novelId: novelRead.parentNode.parentNode
+                  .querySelector(".novel_displayName")
+                  .getAttribute("novelID"),
+                chapter: 1,
+              });
+            });
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

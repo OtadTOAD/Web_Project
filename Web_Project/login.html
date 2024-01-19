@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login_style.css" />
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=SF+Pro+Text:wght@300;400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="background"></div>
+
+    <div class="login_inputs">
+      <div class="top_cover"></div>
+      <div class="login_exit">
+        <i class="fa-solid fa-xmark" id="exit_loginIn"></i>
+      </div>
+      <div class="login_icon"><img src="Data/WebIcon.jpeg" /></div>
+      <strong class="login_inputs_displayName"
+        >Welcome to Otad's Webnovel!</strong
+      >
+      <p class="login_inputs_displayDescription">
+        Access tons of novels and comics by a single tap
+      </p>
+
+      <div class="main_login_choices_container">
+        <button>
+          <i class="fa-brands fa-google color" style="color: black"></i>
+          <strong style="color: black" id="google_signIn"
+            >LOGIN WITH GOOGLE</strong
+          >
+        </button>
+        <button style="background-color: #005ac5">
+          <i class="fa-brands fa-facebook"></i>
+          <strong id="facebook_signIn">LOGIN WITH FACEBOOK</strong>
+        </button>
+        <button style="background-color: rgb(14, 207, 14)">
+          <i class="fa-brands fa-line"></i>
+          <strong id="line_signIn">LOGIN WITH LINE</strong>
+        </button>
+      </div>
+
+      <div class="secondary_login_choices_container">
+        <i class="fa-brands fa-twitter"></i>
+        <i
+          class="fa-solid fa-envelope"
+          style="background-color: rgb(154, 171, 173)"
+        ></i>
+      </div>
+
+      <div class="seperator"></div>
+
+      <div class="text_container">
+        <p id="signIn_question">DON'T HAVE AN ACCOUNT?</p>
+        <p>THEN</p>
+        <p
+          style="color: #005ac5; cursor: pointer; user-select: none"
+          id="create_redirect"
+        >
+          CREATE ACCOUNT
+        </p>
+      </div>
+
+      <div class="policy_container">
+        <p>© 2024 Webnovel</p>
+        <div class="info_seperator"></div>
+        <p style="text-decoration: underline; cursor: pointer">
+          Terms of Service
+        </p>
+        <div class="info_seperator"></div>
+        <p style="text-decoration: underline; cursor: pointer">
+          Privacy Policy.
+        </p>
+      </div>
+    </div>
+
+    <div class="main">
+      <div id="left">
+        <div class="big_logo">
+          <img src="Data/BigLogo.png" />
+        </div>
+      </div>
+
+      <div id="right">
+        <div class="login">
+          <div class="logo" id="reload_button">
+            <img src="Data/WebIcon.jpeg" />
+          </div>
+
+          <strong class="login_header">Welcome to Otad's Webnovel!</strong>
+          <p style="margin-bottom: 35px" id="state_description">
+            Insert text depending on state
+          </p>
+
+          <button class="sign_in" style="margin-bottom: 10px">
+            SIGN IN TO WEBNOVEL
+          </button>
+
+          <p class="sign_up" style="margin-bottom: 75px">
+            Don't have an account?
+            <strong
+              class="signUp_button"
+              style="color: #005ac5; cursor: pointer"
+              id="quick_sign_up_button"
+              >SIGN UP!</strong
+            >
+          </p>
+
+          <div class="sponsors">
+            <div>
+              <img src="Data/NovelNavigator_Logo.png" />
+              <strong>Novel<br />Navigator</strong>
+            </div>
+
+            <div
+              style="
+                height: 100%;
+                width: 1px;
+                background-color: rgba(0, 0, 0, 0.3);
+                margin-right: 25px;
+              "
+            ></div>
+
+            <div>
+              <img src="Data/EnchantedInk_Logo.jpeg" />
+              <strong>Enchanted Ink<br />Publishing</strong>
+            </div>
+          </div>
+          <div class="terms_of_service">
+            <p>© 2024</p>
+            <p>Otad's Webnovel all rights reserved,</p>
+            <p class="terms_button" style="color: #005ac5">terms of service</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get page data, this is used to check to know which button you pressed to arrive at login page
+        // Depending on button it shows why you were brought here
+        function getQueryParameters(url) {
+          var queryParams = {};
+          var queryString = url.split("?")[1];
+
+          if (queryString) {
+            var pairs = queryString.split("&");
+
+            pairs.forEach(function (pair) {
+              var keyValue = pair.split("=");
+              var key = decodeURIComponent(keyValue[0]);
+              var value = decodeURIComponent(keyValue[1] || "");
+
+              queryParams[key] = value;
+            });
+          }
+
+          return queryParams;
+        }
+        const urlParams = getQueryParameters(window.location.href);
+
+        const stateDisplay = document.querySelector("#state_description");
+        var stateText = "Sign in to get access to more features!";
+        switch (urlParams.origin) {
+          case "forum":
+            stateText = "Sign in to get access to forum!";
+            break;
+          case "library":
+            stateText = "Sign in to see your library!";
+            break;
+          case "create":
+            stateText = "Sign in to start creating your own novels!";
+            break;
+          case "add":
+            stateText = "Sign in to add novels to your library!";
+            break;
+        }
+        stateDisplay.textContent = stateText;
+
+        // Login events
+        const signInUI = document.querySelector(".login_inputs");
+        const loginExit = document.querySelector("#exit_loginIn");
+        const signInButton = document.querySelector(".sign_in");
+
+        signInButton.addEventListener("click", function () {
+          signInUI.style.display = "flex";
+        });
+        loginExit.addEventListener("click", function () {
+          signInUI.style.display = "none";
+        });
+
+        // Sign Up events
+        const signUpUI = document.querySelector("#create_redirect");
+        const signUpButton = document.querySelector("#quick_sign_up_button");
+        const google = document.querySelector("#google_signIn");
+        const facebook = document.querySelector("#facebook_signIn");
+        const line = document.querySelector("#line_signIn");
+        const signQuestion = document.querySelector("#signIn_question");
+
+        function UpdateSignUpUI() {
+          if (signUpUI.getAttribute("signUp")) {
+            google.textContent = "LOGIN WITH GOOGLE";
+            facebook.textContent = "LOGIN WITH FACEBOOK";
+            line.textContent = "LOGIN WITH LINE";
+
+            signQuestion.textContent = "DON'T HAVE AN ACCOUNT?";
+            signUpUI.textContent = "CREATE ACCOUNT";
+          } else {
+            google.textContent = "CONTINUE WITH GOOGLE";
+            facebook.textContent = "CONTINUE WITH FACEBOOK";
+            line.textContent = "CONTINUE WITH LINE";
+
+            signQuestion.textContent = "ALREADY HAVE AN ACCOUNT?";
+            signUpUI.textContent = "LOGIN";
+          }
+        }
+
+        signUpUI.addEventListener("click", function () {
+          if (signUpUI.getAttribute("signUp")) {
+            signUpUI.removeAttribute("signUp");
+          } else {
+            signUpUI.setAttribute("signUp", true);
+          }
+
+          UpdateSignUpUI();
+        });
+        signUpButton.addEventListener("click", function () {
+          signUpUI.removeAttribute("signUp");
+          UpdateSignUpUI();
+          signInUI.style.display = "flex";
+        });
+
+        // Link transfer to novels
+        function navigateToPage(url, data) {
+          // Convert the data object to a query string
+          var queryString = Object.keys(data)
+            .map((key) => key + "=" + encodeURIComponent(data[key]))
+            .join("&");
+
+          // Append the query string to the URL
+          var destinationURL = url + "?" + queryString;
+
+          // Navigate to the new page
+          window.location.href = destinationURL;
+        }
+
+        var reloadRelays = document.querySelectorAll("#reload_button");
+        reloadRelays.forEach(function (reloadRelay) {
+          reloadRelay.addEventListener("click", function () {
+            navigateToPage("index.html", {});
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

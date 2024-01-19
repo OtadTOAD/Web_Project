@@ -1,0 +1,390 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+strong, p{
+    font-family: 'Archivo', sans-serif;
+}
+
+/*Navbar*/
+.navbar{
+    width: 100%;
+    height: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(255, 0, 0, 0);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+
+    border-bottom: 1px solid #83848f3a
+}
+.navbar_left{
+    height: 100%;
+    width: 50%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+.navbar_right{
+    height: 100%;
+    width: 50%;
+    float: right;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+}
+
+.navbar_search{
+    border-radius: 100%;
+    border-width: 1px;
+    border-color: #83848f;
+    height: 40px;
+    width: 40px;
+}
+.navbar_search i{
+    font-size: 16px;
+}
+.navbar_settings{
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    width: 40px;
+    height: 40px;
+}
+.navbar_settings i{
+    width: 100%;
+    font-size: 24px;
+}
+.navbar_other_button{
+    width: 80px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #83848f;
+    cursor: pointer;
+}
+.navbar_sign_in{
+    margin-left: 10px;
+    width: 90px;
+    border-radius: 25px;
+    background-color: #0172f0;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    border-width: 0px;
+    cursor: pointer;
+}
+.navbar_sign_in:hover{
+    background-color: #2b8eff;
+    transition: .1s;
+}
+
+
+.navbar_icon img{
+    width: 100%;
+    height: 100%;
+}
+.navbar_icon{
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.navbar_button{
+    width: 90px;
+    height: 100%;
+    margin-left: 16px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0px;
+    
+    cursor: pointer;
+}
+.navbar_button i{
+    color: #83848f;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    line-height: 38px;
+    font-size: 24px;
+}
+.navbar_button strong{
+    margin-left: 8px;
+    height: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    color: #83848f;
+}
+
+.navbar_button:hover i, .navbar_button:hover strong, .navbar_other_button:hover{
+    color: blue;
+    transition: .25s;
+}
+
+/*Content*/
+.content{
+    width: 980px;
+    height: 890px;
+    background-color: rgba(0, 0, 255, 0);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    overflow: hidden;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Genres*/
+#genre_header{
+    font-size: larger;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.genres{
+    width: 20%;
+    height: 100%;
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    margin-top: 2.5%;
+    margin-right: 25px;
+}
+.genres strong{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+    flex-wrap: nowrap;
+    cursor: pointer;
+}
+.genres strong:hover{
+    text-decoration: underline;
+}
+.genre_leads{
+    width: 100%;
+    height: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    background-color: #eeeff9;
+    border-radius: 4px;
+    padding: 1px;
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.genre_leads button{
+    border-radius: 5px;
+    width: 50%;
+    height: 100%;
+    border-width: 0px;
+    background: none;
+    padding-right: 0px;
+    margin-right: 6px;
+    font-weight: 600;
+
+    font-size: smaller;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.genres_list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 8px;
+
+    width: 100%;
+    height: 35%;
+}
+.genres_list button{
+    border-width: 0px;
+    border-radius: 8px;
+
+    text-align: left;
+    font-size: large;
+    color: #323236;
+    background-color: rgba(38, 38, 221, 0);
+}
+.genres_list button:hover{
+    background-color: #3b66f5;
+    color: white;
+    transition: .25s;
+    cursor: pointer;
+}
+
+/*Novels*/
+.novels{
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
+.novels_sort{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.novels_sort strong{
+    font-size: x-large;
+    color: #83848f;
+    padding-bottom: 15px;
+    border-bottom: #83848f49 1px solid;
+    margin-bottom: 12px;
+}
+.novels_sort button{
+    border-radius: 16px;
+    padding: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: white;
+    border: #83848f85 1px solid;
+    cursor: pointer;
+    font-size: larg;
+}
+
+.novels_items{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 20px;
+}
+.novel_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+    border-radius: 8px;
+    box-sizing: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.novel_item_displayName{
+    display: block;
+    font-size: larger;
+    cursor: pointer;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%;
+}
+.novel_item_displayName:hover{
+    text-decoration: underline;
+}
+.novel_item_text button{
+    background-color: #ffffff00;
+    border-width: 0px;
+}
+.novel_item_text button strong{
+    font-weight: 500;
+}
+#library_add{
+    color: blue;
+    cursor: pointer;
+}
+#novel_item_data{
+    color: #83848f;
+}
+#novel_items_description{
+    width: 100%;
+    height: 35px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+}
+
+.novel_item_icon{
+    width: 20%;
+    height: 100%;
+    margin-right: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.novel_item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+.novel_item img:hover{
+    transform: scale(1.15);
+}
+
+.novel_item_text{
+    width: 70%;
+    height: 100%;
+}
+
+
+.hashtag{
+    color: blue;
+    font-size: small;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.hashtag:hover{
+    text-decoration: underline;
+}
+
+.content_end{
+    width: 100%;
+    height: 1px;
+    background-color: #83848f;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.content_end p{
+    text-align: center;
+    color: #83848f;
+    margin: 0px;
+    transform: translateY(-50%);
+    background-color: white;
+    width: 22%;
+    text-wrap: nowrap;
+    border-radius: 50%;
+    font-size: 14px;
+    user-select: none;
+
+    margin: auto;
+}
+.content_end i{
+    margin-left: 8px;
+}
